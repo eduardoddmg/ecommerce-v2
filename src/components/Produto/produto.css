@@ -1,0 +1,54 @@
+.principal
+{
+    display: flex;
+    padding: 5vh;
+    margin: 7vh 0;
+} 
+
+.principal_img
+{
+    width: 50%;
+    text-align: center;
+}
+
+.principal_img img
+{
+    border: 1px solid rgb(199, 194, 194);
+    padding: 2vh;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.principal_info
+{
+    width: 50%;
+    padding-right: 20%;
+}
+
+.principal_info h2
+{ 
+    padding-bottom: 2vh;
+}
+
+.principal_info p
+{
+    padding-bottom: 2vh;
+}
+
+.principal_info button
+{
+    cursor: pointer;
+    padding: 1vh;
+    font-weight: bold;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.price
+{
+    font-size: 14px;
+    font-weight: bold;
+}

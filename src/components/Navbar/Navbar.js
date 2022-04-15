@@ -1,25 +1,32 @@
 import React from 'react'
 import { FiShoppingBag } from "react-icons/fi";
 import './navbar.css'
+import {Link} from 'react-router-dom'
+import {useState, useEffect} from 'react'
 
-const Navbar = () => {
+
+const Navbar = ({info, setInfo, quantidade, setQuantidade}) => {
+useEffect(() => {
+  info.map((val) => setQuantidade(val.quantidade + quantidade));
+  console.log(info);
+});
   return (
     <nav className="navbar">
       <section className="navbar_links">
         <section className="navbar_links_header">
-          <a href="#">LOGO</a>
+          <Link to="/">LOGO</Link>
         </section>
         <section className="navbar_links_items">
-          <a href="#">HOME</a>
-          <a href="#">PRODUCTS</a>
-          <a href="#">ABOUT</a>
-          <a href="#">CONTACT</a>
+          <Link to="/">HOME</Link>
+          <Link to="/">PRODUCTS</Link>
+          <Link to="/">ABOUT</Link>
+          <Link to="/">CONTACT</Link>
         </section>
       </section>
       <section className="navbar_icons">
         <button className='btn_bag'>
           <FiShoppingBag className="bag" />
-          <p className='value_bag'>1</p>
+          <p className='value_bag'>{quantidade}</p>
         </button>
       </section>
     </nav>
