@@ -24,10 +24,10 @@ useEffect(() => {
         </section>
       </section>
       <section className="navbar_icons">
-        <button className='btn_bag'>
+        <Link to="/carrinho" className='btn_bag'>
           <FiShoppingBag className="bag" />
           <p className='value_bag'>{quantidade}</p>
-        </button>
+        </Link>
       </section>
     </nav>
   );

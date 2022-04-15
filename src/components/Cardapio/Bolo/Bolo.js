@@ -3,7 +3,8 @@ import './bolo.css'
 import { FiShoppingBag } from "react-icons/fi";
 import { Link } from 'react-router-dom'
 
-const Bolo = ({info, setInfo}) => {
+const Bolo = ({info, setInfo, quantidade, setQuantidade, cart, setCart}) => {
+
   return (
       <>
       <section className="titulo">
@@ -16,7 +17,7 @@ const Bolo = ({info, setInfo}) => {
         if (item.categoria === "bolo")
           return (
             <section className="card_item" key={index}>
-              <Link to={`/${item.id}`}>
+              <Link to={`/produto/${item.id}`}>
                 <img src={require(`../../../assets/${item.id}.jpg`)} alt="" />
               </Link>
               <section className="end_items">
@@ -25,7 +26,14 @@ const Bolo = ({info, setInfo}) => {
                   <p>R${item.preco},00</p>
                 </section>
                 <section className="end_items_btn">
-                  <button onClick={() => item.quantidade++}>
+                  <button
+                    onClick={() => {
+                      item.quantidade++;
+                      console.log(info);
+                      setCart(() => info.filter((val) => val.quantidade > 0));
+                      setQuantidade(cart.length);
+                    }}
+                  >
                     <FiShoppingBag className="icon_bag" />
                   </button>
                 </section>

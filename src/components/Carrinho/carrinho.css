@@ -1,0 +1,10 @@
+.principal
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.principal img
+{
+    width: 20%;
+}
