@@ -1,4 +1,4 @@
-<img src="exemplo-image.png" alt="exemplo imagem">
+<img src="overview.png" alt="exemplo imagem">
 
 # Nome Do Projeto
 
