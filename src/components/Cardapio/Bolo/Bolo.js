@@ -1,9 +1,14 @@
 import React from 'react';
 import './bolo.css'
 import { FiShoppingBag } from "react-icons/fi";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import {useEffect} from 'react'
 
 const Bolo = ({info, setInfo, quantidade, setQuantidade, cart, setCart}) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
       <>
@@ -23,7 +28,7 @@ const Bolo = ({info, setInfo, quantidade, setQuantidade, cart, setCart}) => {
               <section className="end_items">
                 <section className="end_items_text">
                   <p>{item.nome}</p>
-                  <p>R${item.preco},00</p>
+                  <p style={{fontWeight: 'bold'}}>R${item.preco},00</p>
                 </section>
                 <section className="end_items_btn">
                   <button

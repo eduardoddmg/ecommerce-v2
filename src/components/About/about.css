@@ -1,9 +1,19 @@
-.principal
+.principal_about_container
+{
+    width: 100%;
+    background-color: green;
+    display: flex;
+    padding: 2vh;
+}
+
+.principal_about
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10vh 0;
+    padding: 0;
+    width: 50%;
 }
 
 .principal_logo
@@ -21,7 +31,88 @@
 
 .principal_text
 {
-    width: 50%;
-    padding: 0 20% 0 0;
+    width: 90%;
 }
 
+.informacao
+{
+    background-color: green;
+    height: 85vh;
+}
+
+.informacao img
+{
+    width: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+
+.informacao_text
+{
+    padding: 0;
+}
+
+.informacao_text *
+{
+    color: white;
+}
+
+.informacao_text h1
+{
+    font-size: 45px;
+    padding: 0vh 0 6vh 0;
+}
+
+.informacao_text p
+{
+    font-size: 18px;
+    text-align: center;
+}
+
+.principal_about_container_img
+{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal_about_container_img img
+{
+    width: 60%;
+    border-radius: 12px;
+}
+
+.principal_informacao_icon
+{
+    display: flex;
+    margin: 3vh 0 0 0;
+}
+
+.principal_informacao_icon *
+{
+    color: white;
+    margin: 0 1vh;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .principal_about_container
+    {
+        flex-direction: column;
+    }
+    .principal_about, .informacao
+    {
+        width: 100%;
+        padding: 0;
+        height: 70vh;
+    }
+    .principal_about_container_img
+    {
+        width: 100%;
+        padding-bottom: 3vh;
+    }
+}

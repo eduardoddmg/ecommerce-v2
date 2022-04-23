@@ -31,7 +31,7 @@ const Carrossel = ({info, setInfo}) => {
     <Carousel responsive={responsive} className="carousel">
       {info.map((item, index) => {
         return (
-          <Link to={`/${item.id}`} className="card_item_carousel" key={index}>
+          <Link to={`/produto/${item.id}`} className="card_item_carousel" key={index}>
             <img src={require(`../../assets/${item.id}.jpg`)} alt="" />
           </Link>
         );

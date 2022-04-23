@@ -1,0 +1,103 @@
+.contato
+{
+    background-color: rgb(19, 49, 19);
+    padding: 6vh 0;
+}
+
+.contato *
+{
+    color: white;
+}
+
+.input
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.line_two, .line_one
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input_line_two, .input_line_one
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_submit
+{
+    display: flex;
+    justify-content: center;
+}
+
+.input_line_two 
+{
+    margin: 1vh 2vh;
+    width: 20%;
+}
+
+.input_line_one
+{
+    width: 42%;
+}
+
+.input_line_two input, .input_line_one input, .input_text
+{ 
+    width: 100%;
+    border: 1px solid white;
+    padding: 2vh;
+    font-size: 15px;
+    border-radius: 5px;
+    color: black;
+}
+
+.input_text *
+{
+    color: black;
+}
+
+label
+{
+    padding: 1vh 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.input_text
+{
+    height: 20vh;
+}
+
+.btn_submit
+{
+    padding: 2vh 0;
+}
+
+.btn_submit button
+{
+    padding: 2vh 6vh;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn_submit button:hover
+{
+    background-color: rgb(34, 61, 35);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .input_line_two, .input_line_one
+    {
+        width: 80%;
+    }
+}

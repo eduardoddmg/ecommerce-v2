@@ -2,8 +2,14 @@ import React from 'react';
 import './ovo.css'
 import { FiShoppingBag } from "react-icons/fi";
 import {Link} from 'react-router-dom'
+import {useEffect} from 'react'
 
 const Ovo = ({info, setInfo, quantidade, setQuantidade, cart, setCart}) => {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
+
   return (
       <>
         <section className="titulo">
@@ -22,15 +28,16 @@ const Ovo = ({info, setInfo, quantidade, setQuantidade, cart, setCart}) => {
               <section className="end_items">
                 <section className="end_items_text">
                   <p>{item.nome}</p>
-                  <p>R${item.preco},00</p>
+                  <p style={{ fontWeight: "bold" }}>R${item.preco},00</p>
                 </section>
                 <section className="end_items_btn">
-                  <button onClick={() => {
-                    item.quantidade++;
-                    console.log(info);
-                    setCart(() => info.filter(val => val.quantidade > 0));
-                    setQuantidade(cart.length);
-                  }}>
+                  <button
+                    onClick={() => {
+                      item.quantidade++;
+                      console.log(info);
+                      setCart(() => info.filter((val) => val.quantidade > 0));
+                    }}
+                  >
                     <FiShoppingBag className="icon_bag" />
                   </button>
                 </section>

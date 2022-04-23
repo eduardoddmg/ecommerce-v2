@@ -23,6 +23,7 @@
 {
     width: 50%;
     padding-right: 20%;
+    text-align: justify;
 }
 
 .principal_info h2
@@ -49,6 +50,24 @@
 
 .price
 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .principal
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .principal_img, .principal_info, .principal_img img
+    {
+        width: 100%;
+    }
+    .principal_info
+    {
+        padding: 2vh 0;
+    }
+
 }

@@ -1,0 +1,51 @@
+.titulo_top_card
+{
+    background-color: rgb(21, 44, 21);
+    color: white;
+    padding-top: 7vh;
+}
+
+.card_principal
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5vh 0 10vh 0;
+    background-color: rgb(21, 44, 21);
+}
+
+.card
+{
+    margin: 2vh 5vh;
+    width: 25%;
+    height: 60vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: green;
+}
+
+.card * 
+{
+    color: white;
+}
+
+.card img
+{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.card_principal button
+{
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .card
+    {
+        width: 60%;
+    }
+}

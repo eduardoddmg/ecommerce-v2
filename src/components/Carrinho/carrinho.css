@@ -1,10 +1,231 @@
-.principal
+.principal_container_carrinho
+{
+    min-height: 60vh;
+}
+
+.container_carrinho
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.principal_carrinho
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 4vh;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 10px;
+    width: 30%;
+    margin: 2vh auto;
 }
 
-.principal img
+.principal_carrinho_top
 {
+    display: flex;
+    align-items: center;
+}
+
+.principal_carrinho img
+{
+    width: 40%;
+    border-radius: 10px;
+    margin-right: 2vh;
+}
+
+.principal_carrinho_btn
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+}
+
+.principal_carrinho_btn button
+{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin: 1vh 2vh;
+    padding: 2vh;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.principal_carrinho_btn .btn_add
+{
+    background-color: green;
+}
+
+.principal_carrinho_btn .btn_rm
+{
+    background-color: red;
+}
+
+.info_carrinho_vazio
+{
+    padding: 10vh 0;
+}
+
+.titulo_preco_final
+{
+    margin: 3vh auto;
+    padding: 2vh;
+    background-color: rgb(27, 47, 27);
+    color: white;
+    width: 30%;
+    border-radius: 4px;
+}
+
+.btn_finalizar_compra
+{
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 1vh;
+    width: 30%;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 2vh 0;
+}
+
+.btn_compra
+{
+    width: 100%;
+    text-align: center;
+}
+
+.input
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.line_two, .line_one
+{
+    display: flex;
+    justify-content: center;
+}
+
+.input_line_two, .input_line_one
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_submit
+{
+    display: flex;
+    justify-content: center;
+}
+
+.input_line_two 
+{
+    margin: 1vh 2vh;
     width: 20%;
+}
+
+.input_line_one
+{
+    width: 42%;
+}
+
+.input_line_two input, .input_line_one input, .input_text
+{ 
+    width: 100%;
+    border: 1px solid black;
+    padding: 2vh;
+    font-size: 15px;
+    border-radius: 5px;
+    color: black;
+}
+
+.input_text *
+{
+    color: black;
+}
+
+label
+{
+    padding: 1vh 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.input_text
+{
+    height: 20vh;
+}
+
+.btn_submit
+{
+    padding: 2vh 0;
+}
+
+.btn_submit button
+{
+    padding: 2vh 6vh;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn_submit button:hover
+{
+    background-color: rgb(34, 61, 35);
+    transition: 0.5s;
+}
+
+.input h1
+{
+    padding-top: 6vh;
+}
+
+.back 
+{
+    text-align: left;
+}
+
+.back_btn
+{
+    margin: 2vh;
+    width: 10%;
+    padding: 2vh;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .line_two
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input_line_two, .input_line_one
+    {
+        width: 90%;
+    }
+    .principal_carrinho
+    {
+        width: 90%;
+    }
+    .titulo_preco_final
+    {
+        width: 50%;
+    }
+    .btn_finalizar_compra
+    {
+        width: 50%;
+    }
+    .principal_carrinho_top img
+    {
+        width: 40%;
+    }
 }

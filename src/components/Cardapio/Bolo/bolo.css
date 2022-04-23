@@ -71,3 +71,11 @@
     border: 1px solid green;
     transition: 0.5s;
 }
+
+@media only screen and (max-width: 1000px)
+{
+    .card_item
+    {
+        width: 80%;
+    }
+}
