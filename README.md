@@ -4,6 +4,8 @@
 
 Projeto web desenvolvido utilizando ReactJs, é uma Loja de Doces que permite você montar o seu carrinho e enviar o seu pedido para o whatsapp da loja, de modo a facilitar a comunicação entre cliente e loja.
 
+# Acesse o site
+<a href="https://lojadedocesedu.netlify.app" target="_blank">Clique aqui para acessar o deploy</a>
 
 ## Feito Com:
 * HTML
