@@ -15,7 +15,7 @@ const ProductsGeral = () => {
                 <h1>Ovos</h1>
             </button>
             <button className='card' onClick={() => navigate('/bolo')}>
-                <img src={require('../../assets/18.jpg')} alt="img_card" />
+                <img src={require('../../assets/24.jpg')} alt="img_card" />
                 <h1>Bolos</h1>
             </button>
         </section>

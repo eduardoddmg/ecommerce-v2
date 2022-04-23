@@ -31,33 +31,28 @@ const Carrinho = ({info, setInfo, cart, setCart}) => {
     for(let i of cart) total+=(i.quantidade*i.preco); 
     console.log({nome, sobrenome, telefone, endereco, mensagem});
     let message = '';
-    for (let i of cart)
-    {
-      message += (i.quantidade+ 'x '+i.nome+'\n')
-    }
-    message+= ('preco:' + precoTotal + '\n');
-    message =
-      "nome:" +
-      nome +
+    message +=
+    "nome: " +
+      nome + " " + sobrenome +
       "\n" +
-      "sobrenome:" +
-      sobrenome +
-      "\n" +
-      "telefone:" +
+      "telefone: " +
       telefone +
       "\n" +
-      "endereco:" +
+      "endereco: " +
       endereco +
       "\n" +
-      "mensagem:" +
+      "mensagem: " +
       mensagem +
       "\n" +
-      "Total:\n" +
-      total;
-      console.log(
-          message
-      );
-    message = 'https://wa.me/5582996038479?text=' + message;
+      "----------\n";
+      for (let i of cart)
+      {
+        message += (i.quantidade+ 'x '+i.nome+'\n')
+      }
+      message+= '----------\n'
+      message += "Total: R$" + total;
+      message+= '\n';
+      message = 'https://wa.me/5582996038479?text=' + message;
     message = message.replace(/ /gi, '%20');
     message = message.replace(/\n/gi, '%0a');
     console.log(message);
@@ -75,7 +70,7 @@ const Carrinho = ({info, setInfo, cart, setCart}) => {
           <button className="btn_finalizar_compra back_btn" onClick={() => {
             navigate(-1);
           }}>
-            Voltar
+            {"<<"}
           </button>
       </section>
       <section className="container_carrinho">
@@ -130,14 +125,16 @@ const Carrinho = ({info, setInfo, cart, setCart}) => {
           <section className="btn_compra">
             <button
               className="btn_finalizar_compra"
-              onClick={() => setForm(true)}
+              onClick={(e) => {
+                setForm(true);
+              }}
             >
               Finalizar compra
             </button>
           </section>
         </>
       )}
-      {form && (
+      {(form && cart.length > 0) && (
         <>
           <form className="input">
             <h1>Envie seus dados</h1>

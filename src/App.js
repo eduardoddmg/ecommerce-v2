@@ -114,7 +114,7 @@ function App() {
         />
         <Route path="*" element={<Erro />} />
       </Routes>
-      {tamanho > 1000 && <Footer />}
+      <Footer />
     </>
   );
 }

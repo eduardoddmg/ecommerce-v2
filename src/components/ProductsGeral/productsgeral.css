@@ -33,6 +33,8 @@
 {
     width: 100%;
     height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .card_principal button
@@ -45,6 +47,11 @@
 {
     .card
     {
-        width: 60%;
+        width: 85%;
+        height: auto;
+    }
+    .card img 
+    {
+        height: auto;
     }
 }

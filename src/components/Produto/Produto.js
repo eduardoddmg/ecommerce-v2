@@ -1,15 +1,20 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./produto.css";
 import Carrossel from "../Carrossel/Carrossel";
 
 import {useEffect} from 'react'
 
 const Produto = ({ info, setInfo, cart, setCart }) => {
-  useEffect(() => {
-    window.scrollTo(0,0);
-  }, [])
   let params = useParams();
+  let navigate = useNavigate();
+  useEffect(() => {
+    let count = 0;
+    window.scrollTo(0,0);
+    for (let i of info) count++;
+    console.log(count);
+    if (parseInt(params.id) > count) navigate('/*');
+  }, [])
   return (
     <div>
       {info.map((produto, index) => {

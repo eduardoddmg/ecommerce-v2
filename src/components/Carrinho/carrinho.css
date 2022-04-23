@@ -218,14 +218,23 @@ label
     }
     .titulo_preco_final
     {
-        width: 50%;
+        width: 70%;
     }
     .btn_finalizar_compra
     {
-        width: 50%;
+        width: 70%;
     }
     .principal_carrinho_top img
     {
         width: 40%;
+    }
+    .btn_submit button
+    {
+        width: 70%;
+    }
+    .back_btn
+    {
+        margin-left: 10px;
+        width: 30%;
     }
 }
