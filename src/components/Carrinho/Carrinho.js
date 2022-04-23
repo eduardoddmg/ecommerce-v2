@@ -57,7 +57,7 @@ const Carrinho = ({info, setInfo, cart, setCart}) => {
       console.log(
           message
       );
-    message = 'https://wa.me/82996038479?text=' + message;
+    message = 'https://wa.me/5582996038479?text=' + message;
     message = message.replace(/ /gi, '%20');
     message = message.replace(/\n/gi, '%0a');
     console.log(message);
